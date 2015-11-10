@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<body bgcolor="#F7FFE9" background="registro.jpg">
+        <?php
+        if(!IsSet($_POST['Enviar']))
+       {
+       ?>
+	<basefont size="3" font="Arial">
+		<header>
+			<h1>
+				<div align="center">
+				Petici&oacute;n de registro
+				</align>
+			</h1>
+		</header>
+	<form>
+		<p><font color="white">
+			Nombre: <input name="nombre" type="text"><br>
+			Apellido Parterno: <input name="apellidopaterno" type="text"><br>
+            Apellido Marterno: <input name="apellidomaterno" type="text"><br>
+            Correo electr&oacute;nico: <input name="correo" type="text"><br>
+       
+			<form action="" name="f1"> 
+           	 <script>
+				function comprobarClave(){ 
+					clave1 = document.f1.clave1.value 
+					clave2 = document.f1.clave2.value 
+
+				if (clave1 == clave2) 
+					alert("Las dos claves son iguales...") 
+				else 
+					alert("Las dos claves son distintas...") 
+				}	
+			 </script>   		 
+		 Contrase&ntilde;a: <input type="password" name="clave1" size="20"> 
+          <br> 
+         veriique su contrase&ntilde;a: <input type="password" name="clave2" size="20"> 
+         <br> 
+	
+
+		 <input type="button" value="Comprobar si son iguales" onClick="comprobarClave()"> 
+ 		 </form>
+			
+			Sexo:
+			<select>
+				<option selected>---Elige uno---</option>
+				<option>Hombre</option>
+				<option>Mujer</option>
+			</select>
+		</p></font>
+		<p>
+			Edad:<select>
+				<option selected>---Elige uno---</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25 &oacute; m&aacute;s</option>
+			</select>
+		</p>
+
+		<p>
+			Opini&oacute;n o sugerencia sobre la p&aacute;gina web:<br>
+			<textarea name="opinion" cols="30" rows="3">Escribe aqu&iacute; tu opini&oacute;n o sugerencia...</textarea>
+		</p>
+
+		<p>
+			<br>
+			<input name="Enviar" type="submit" value="Enviar">
+			<input name="Borrar" type="reset" value="Borrar">
+		</p>
+		<p>
+			<a href="mailto:Administrador@lobocitas.com?&subject=Peticion de registro">
+			</a>
+		</p>
+		<h5><a href="principal.html">Ir a pagina principal</a></h5>
+
+	</form>
+	</body>
+</html>
